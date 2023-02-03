@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -24,7 +26,7 @@ public class Alquiler  implements Serializable  {
 	private static final long serialVersionUID = 1L;
 	
 	
-	@Id
+	 @Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	 private Long id_alquiler;
 	 @Column(name="num_dias_alquiler", nullable=false, length = 10, unique=false)
@@ -42,6 +44,8 @@ public class Alquiler  implements Serializable  {
 	 private String descripcion_alquiler;
      @Column(name="precio_total", nullable=false, unique=false)
 	 private Double precio_total;
-	 
-	 
+	 /*
+     @ManyToOne
+     @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
+     private Cliente cliente;*/
 }

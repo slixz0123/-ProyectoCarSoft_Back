@@ -16,7 +16,7 @@ import lombok.Setter;
 
 
 @Entity
-@Table(name="reserva")
+@Table(name="comprobante")
 @Getter
 @Setter
 public class Comprobante implements Serializable {
