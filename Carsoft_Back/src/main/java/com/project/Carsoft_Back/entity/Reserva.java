@@ -7,18 +7,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.util.Date;
-
 import lombok.Getter;
 import lombok.Setter;
 
 
-@Entity
-@Table(name="reserva")
 @Getter
 @Setter
-
+@Entity
+@Table(name="reserva")
 public class Reserva implements Serializable {
 	
 	
@@ -37,5 +37,10 @@ public class Reserva implements Serializable {
 	 private Date fecha_fin;
 	 @Column(name="forma_pago", nullable=false, length = 45, unique=false)
 	 private String forma_pago;
+	 
+	 
+	 /* @ManyToOne
+	  @JoinColumn(name="id_cliente", referencedColumnName = "id_cli")
+	  private Cliente cliente;*/
 
 }

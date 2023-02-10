@@ -16,7 +16,7 @@ import lombok.Setter;
 @Table(name="propietario")
 @Getter
 @Setter
-public class Propietario {
+public class Propietario extends Persona{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_propietario;

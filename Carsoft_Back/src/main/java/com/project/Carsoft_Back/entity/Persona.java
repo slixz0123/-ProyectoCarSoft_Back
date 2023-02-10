@@ -10,16 +10,18 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
 
-@Table(name="persona")
 @Getter
 @Setter
-@MappedSuperclass
-public class persona implements Serializable {
+@Table(name="persona")
+@Entity
+public class Persona implements Serializable {
 	
 	
 	

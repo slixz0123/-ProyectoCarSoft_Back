@@ -14,7 +14,7 @@ import lombok.Setter;
 @Table(name="empleado")
 @Getter
 @Setter
-public class Empleado extends persona {
+public class Empleado extends Persona {
 	/**
 	 * 
 	 */
